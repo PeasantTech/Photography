@@ -4,40 +4,62 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Home</title>
     <script src="https://kit.fontawesome.com/e9b22e8c05.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="./images/faviconWhite.png">
-    <link rel="stylesheet" href="./colors.css">
-    <link rel="stylesheet" href="./indexStyles.css">
+    <link rel="icon" type="image/x-icon" href="./assets/faviconWhite.png">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
     <section id="header" class="header">
         <div class="navbar">
-            <a href="index.html"><button class="nav-button">Home</button></a>
+            <a href="./index.html"><button class="nav-button">Home</button></a>
             <div class="genres">
-                <a href="sports.html"><button class="nav-button">Sports</button></a>
-                <a href="subject.html"><button class="nav-button">Subject</button></a>
-                <a href="wildlife.html"><button class="nav-button">Wildlife</button></a>
-                <a href="landscape.html"><button class="nav-button">Landscape</button></a>
+                <div class="genres-box">
+                    <a href="./sports.html"><button class="nav-button">Sports</button></a>
+                    <a href="../subject.html"><button class="nav-button">Subject</button></a>
+                </div>
+                <div class="genres-box">
+                    <a href="./wildlife.html"><button class="nav-button">Wildlife</button></a>
+                    <a href="./landscape.html"><button class="nav-button">Landscape</button></a>
+                </div>
             </div>
         </div>
     </section>
-    <section id="content">
+    <div class="gradient-down"></div>
+    <section class="content">
+        <a id="sport-selection-link" class="selections" href="./sports.html">
+            <div id="sport-selection" class="genre-selection-container"></div>
+        </a>
+        <a id="subject-selection-link" class="selections" href="./subject.html">
+            <div id="subject-selection" class="genre-selection-container"></div>
+        </a>
+        <a id="wildlife-selection-link" class="selections" href="./wildlife.html">
+            <div id="wildlife-selection" class="genre-selection-container"></div>
+        </a>
+        <a id="landscape-selection-link" class="selections" href="./landscape.html">
+            <div id="landscape-selection" class="genre-selection-container"></div>
+        </a>
     </section>
     <section id="footer" class="footer">
-        <div class="signature">
-            <p class="footer-words">Made by:</p>
-            <p class="footer-words">Connor Arpide,</p>
-            <p class="footer-words">Peasant Tech</p>
+        <div class="footer-left"></div>
+        <div class="footer-center">
+            <div class="signature">
+                <p class="footer-words">© 2025</p>
+                <p class="footer-words">Connor Arpide</p>
+                <p class="footer-words separator">|</p>
+                <p class="footer-words">Peasant Tech</p>
+            </div>
+            <div class="quick-link-div">
+                <a class="fa-solid fa-envelope" href="peasantpictures@gmail.com" target="_blank"></a>
+                <a class="fa-brands fa-github" href="https://github.com/PeasantTech" target="_blank"></a>
+                <a class="fa-brands fa-instagram" href="https://instagram.com/peasantpictures" target="_blank"></a>
+                <a class="fa-brands fa-facebook" href="https://facebook.com/peasantpictures" target="_blank"></a>
+            </div>
         </div>
-        <div class="quick-link-div">
-            <a class="fa-solid fa-envelope" href="peasantpictures@gmail.com" target="_blank"></a>
-            <a class="fa-brands fa-github" href="https://github.com/PeasantTech" target="_blank"></a>
-            <a class="fa-brands fa-instagram" href="https://instagram.com/peasantpictures" target="_blank"></a>
-            <a class="fa-brands fa-facebook" href="https://facebook.com/peasantpictures" target="_blank"></a>
-        </div>
+        <div class="footer-right"></div>
     </section>
+    <script src="./script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,269 @@
+:root {
+    --color-background: #aaaaaa;
+    --color-background-header: #373737;
+    --color-background-footer: #373737;
+    --color-font: #d2d2d2;
+    --color-font-title: #66454d;
+    --color-hyperlink: #ffb5c7;
+    --color-hyperlink-hover: #e493a7;
+    --color-hyperlink-clicked: #ff7d97;
+    --color-border: #ffb5c7;
+    --color-button-hover: #ffb5c711;
+    --color-lightroom-link: #be4f4f;
+    --color-lightroom-hover: #773030;
+}
+
+* {
+    font-size: 17px;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-font);
+    margin: 0px;
+}
+
+a {
+    color: var(--color-hyperlink);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-hyperlink-hover)
+}
+
+a:visited {
+    color: var(--color-hyperlink-clicked);
+}
+
+.link-to-lightroom {
+    width: 100%;
+    margin: 1vw auto;
+    border: none;
+    ;
+    height: 25px;
+    text-align: center;
+    color: var(--color-lightroom-link);
+}
+
+.link-to-lightroom:hover {
+    color: var(--color-lightroom-hover);
+}
+
+.coming-soon-tm {
+    text-align: center;
+    color: var(--color-lightroom-hover);
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.footer,
+.header {
+    justify-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.header {
+    padding: 0px;
+    top: 0%;
+    background-color: var(--color-background-header);
+    border-bottom: solid 1px var(--color-border);
+}
+
+.footer {
+    bottom: 0%;
+    padding-bottom: 15px;
+    background-color: var(--color-background-footer);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.genres {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nav-button {
+    text-align: center;
+    line-height: 17px;
+    background: none;
+    color: var(--color-font);
+    border: none;
+    width: 20%;
+    margin: 5px 0px;
+    padding: 5px;
+    min-width: 100px;
+}
+
+.nav-button:hover {
+    background-color: var(--color-button-hover);
+    border-radius: 5px;
+    border-right: 1px solid var(--color-border);
+    border-left: 1px solid var(--color-border);
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin: 1vw auto;
+}
+
+.photo-albums {
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.individual-album {
+    width: 40vw;
+    text-align: center;
+    background-color: #373737;
+}
+
+.album-cover {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sport-images {
+    max-width: 45%;
+    min-width: 500px;
+    overflow: hidden;
+    margin: 1vw;
+}
+
+.genre-selection-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.genre-selection-container:hover {
+    scale: 1.1;
+}
+
+.selections {
+    max-width: 45%;
+    margin: 15px;
+}
+
+.genre-title {
+    align-self: center;
+    text-align: center;
+    font-weight:bolder;
+    color: var(--color-font-title);
+    font-size: 2rem;
+    margin: 2px;
+    margin-top: 5px;
+}
+
+.slivers {
+    width: 25%;
+    aspect-ratio: 1 / 4;
+    border: none;
+    margin: -1px;
+}
+
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+}
+
+.signature {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.footer-words {
+    margin: 5px 4px auto auto;
+}
+
+.quick-link-div {
+    margin-top: 5px;
+    justify-self: center;
+}
+
+.gradient-down {
+    background: linear-gradient(var(--color-border), var(--color-background));
+    width: 100%;
+    height: 10px;
+}
+
+.gradient-up {
+    background: linear-gradient(var(--color-background), var(--color-border));
+    width: 100%;
+    height: 10px;
+}
+
+@media (max-width: 700px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .genres {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .genres-box {
+        text-align: center;
+    }
+
+    .genre-selection-container {
+        min-width: 500px;
+    }
+
+    .nav-button {
+        margin: 2px auto;
+    }
+
+    .photo-albums {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .individual-album {
+        width: 90%;
+    }
+
+    .footer-left {
+        display: none;
+    }
+
+    .footer-right {
+        display: none;
+    }
+
+    .signature {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
