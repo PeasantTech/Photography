@@ -53,7 +53,7 @@ const sportSlivers = (array) => {
     array.forEach((number) => {
         const img = document.createElement('img');
         img.src = `./images/Slivers/Sports/SportSlivers-${number}.jpg`;
-        img.alt = `Image ${number}`;
+        img.alt = `Sport Preview Image ${number}`;
         img.classList = "slivers";
         sportSelection.appendChild(img);
     })
@@ -67,7 +67,7 @@ const subjectSlivers = (array) => {
     array.forEach((number) => {
         const img = document.createElement('img');
         img.src = `./images/Slivers/Subject/SubjectSlivers-${number}.jpg`;
-        img.alt = `Image ${number}`;
+        img.alt = `Subject Preview Image ${number}`;
         img.classList = "slivers";
         subjectSelection.appendChild(img);
     })
@@ -81,7 +81,7 @@ const wildlifeSlivers = (array) => {
     array.forEach((number) => {
         const img = document.createElement('img');
         img.src = `./images/Slivers/Wildlife/WildlifeSlivers-${number}.jpg`;
-        img.alt = `Image ${number}`;
+        img.alt = `Wildlife Preview Image ${number}`;
         img.classList = "slivers";
         wildlifeSelection.appendChild(img);
     })
@@ -95,7 +95,7 @@ const landscapeSlivers = (array) => {
     array.forEach((number) => {
         const img = document.createElement('img');
         img.src = `./images/Slivers/Landscape/LandscapeSlivers-${number}.jpg`;
-        img.alt = `Image ${number}`;
+        img.alt = `Landscape Preview Image ${number}`;
         img.classList = "slivers";
         landscapeSelection.appendChild(img);
     })
@@ -105,25 +105,25 @@ const landscapeSlivers = (array) => {
     landscapeLink.appendChild(title);
 }
 
-selectionContainers[0].addEventListener("mouseover", () => {
-    const rotateVal = Math.floor(Math.random() * (10 - (-10) + 1)) + (-10);
-    console.log(rotateVal);
-    selectionContainers[0].style.transform = `rotate(${rotateVal}deg)`
-})
-selectionContainers[1].addEventListener("mouseover", () => {
-    const rotateVal = Math.floor(Math.random() * (10 - (-10) + 1)) + (-10);
-    console.log(rotateVal);
-    selectionContainers[1].style.transform = `rotate(${rotateVal}deg)`
-})
-selectionContainers[2].addEventListener("mouseover", () => {
-    const rotateVal = Math.floor(Math.random() * (10 - (-10) + 1)) + (-10);
-    console.log(rotateVal);
-    selectionContainers[2].style.transform = `rotate(${rotateVal}deg)`
-})
-selectionContainers[3].addEventListener("mouseover", () => {
-    const rotateVal = Math.floor(Math.random() * (10 - (-10) + 1)) + (-10);
-    console.log(rotateVal);
-    selectionContainers[3].style.transform = `rotate(${rotateVal}deg)`
-})
+// selectionContainers[0].addEventListener("mouseover", () => {
+//     const rotateVal = Math.floor(Math.random() * (5 - (-5) + 1)) + (-5);
+//     console.log(rotateVal);
+//     selectionContainers[0].style.transform = `rotate(${rotateVal}deg)`
+// })
+// selectionContainers[1].addEventListener("mouseover", () => {
+//     const rotateVal = Math.floor(Math.random() * (5 - (-5) + 1)) + (-5);
+//     console.log(rotateVal);
+//     selectionContainers[1].style.transform = `rotate(${rotateVal}deg)`
+// })
+// selectionContainers[2].addEventListener("mouseover", () => {
+//     const rotateVal = Math.floor(Math.random() * (5 - (-5) + 1)) + (-5);
+//     console.log(rotateVal);
+//     selectionContainers[2].style.transform = `rotate(${rotateVal}deg)`
+// })
+// selectionContainers[3].addEventListener("mouseover", () => {
+//     const rotateVal = Math.floor(Math.random() * (5 - (-5) + 1)) + (-5);
+//     console.log(rotateVal);
+//     selectionContainers[3].style.transform = `rotate(${rotateVal}deg)`
+// })
 
 document.addEventListener("onload", indexSlivers());
