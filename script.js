@@ -10,6 +10,8 @@ const subjectLink = document.getElementById("subject-selection-link");
 const wildlifeLink = document.getElementById("wildlife-selection-link");
 const landscapeLink = document.getElementById("landscape-selection-link");
 
+const scrollTopBtn = document.getElementById("to-top-button");
+
 
 const indexSlivers = () => {
     let sportsArr = [];
@@ -28,13 +30,17 @@ const indexSlivers = () => {
                 maxRand = 1;
             } else if (i == 3) {
                 maxRand = 1;
-            } else {return}
-            // const randNum = 1;
-            let randNum = Math.floor(Math.random() * maxRand) + 1;
+            } else { return }
+
+            let randNum = Math.floor(Math.random() * (maxRand) + 1);
+
+            while (sliversArr[i].includes(randNum)) {
+                randNum = Math.floor(Math.random() * (maxRand) + 1);
+            }
+
             randNum = randNum.toString();
             if (randNum.length == 1) {
                 randNum = "00" + randNum;
-
             } else if (randNum.length == 2) {
                 randNum = "0" + randNum;
             }
@@ -125,5 +131,19 @@ const landscapeSlivers = (array) => {
 //     console.log(rotateVal);
 //     selectionContainers[3].style.transform = `rotate(${rotateVal}deg)`
 // })
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollTopBtn.style.display = "block";
+    } else {
+        scrollTopBtn.style.display = "none";
+    }
+};
+
+scrollTopBtn.onclick = function () {
+    document.body.scrollTo({top: 0, behavior: "smooth"});
+    document.documentElement.scrollTo({top: 0, behavior: "smooth"});
+    // window.scrollTo({top: 0, behavior: "smooth"})
+}
 
 document.addEventListener("onload", indexSlivers());
