@@ -4,14 +4,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WPI v Wheaton</title>
+    <title id="page-title">WPI vs Wheaton</title>
     <script src="https://kit.fontawesome.com/e9b22e8c05.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="../assets/faviconWhite.png">
     <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
-    <button id="to-top-button" title="Go to top">Back to Top</button>
     <section id="header" class="header">
         <div class="navbar">
             <a href="../index.html"><button class="nav-button">Home</button></a>
@@ -26,10 +25,12 @@
                 </div>
             </div>
         </div>
+        <div id="fullpage"><img id="fullscreen-image"></div>
     </section>
     <section class="content">
+        <button id="to-top-button" title="Go to top">Back to Top</button>
         <a class="link-to-lightroom" href="https://adobe.ly/3VL2l4d" target="_blank">Full Album on Lightroom Here</a>
-        <div id="images" class="images">
+        <div id="images" class="gallery">
         </div>
     </section>
     <section id="footer" class="footer">
@@ -54,21 +55,6 @@
         </div>
         <div class="footer-right"></div>
     </section>
-    <script>
-        const imageContainer = document.getElementById('images');
-        const numOfImg = 23;
-
-        // Assuming images are named: img1.jpg, img2.jpg, ... up to imgN.jpg
-        for (let i = 1; i <= numOfImg; i++) {
-            const img = document.createElement('img');
-            let imgNum = i;
-            // i < 10 ? imgNum = "0" + i : imgNum = i;
-            img.src = `../Sports/WPI_Wheaton/WPI_Wheaton-${imgNum}.jpg`;
-            img.alt = `Image ${i}`;
-            img.classList = "sport-images";
-            imageContainer.appendChild(img);
-        }
-    </script>
     <script src="../script.js"></script>
 </body>
 

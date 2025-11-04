@@ -1,5 +1,5 @@
 :root {
-    --color-background: #aaaaaa;
+    --color-background: #575757;
     --color-background-header: #373737;
     --color-background-footer: #373737;
     --color-font: #d2d2d2;
@@ -11,14 +11,20 @@
     --color-button-hover: #ffb5c711;
     --color-lightroom-link: #be4f4f;
     --color-lightroom-hover: #773030;
-    --color-album-background: #373737;
+    --color-album: #dddddd;
+    --color-album-background: #222222;
     --color-invisible: #37373700;
     --color-totop: #373737;
     --color-totop-font: #ffb5c7;
     --color-totop-border: #ffb5c7;
-    --color-totop-hover: #ffb5c7;
-    --color-totop-hover-border: #373737;
-    --color-totop-hover-font: #373737;
+    --color-totop-hover: #373737;
+    --color-scrollbar-track: #373737;
+    --color-scrollbar-pill: #ffb5c7;
+    --color-fullscreen-background: #373737aa;
+}
+
+html {
+    scrollbar-color: var(--color-scrollbar-pill) var(--color-scrollbar-track);
 }
 
 * {
@@ -29,10 +35,7 @@ body {
     background-color: var(--color-background);
     color: var(--color-font);
     margin: 0px;
-}
-
-body::-webkit-scrollbar {
-    display: none;
+    overflow-x: hidden;
 }
 
 a {
@@ -81,13 +84,24 @@ a:visited {
     flex-direction: column;
     min-height: max-content;
     height: 15vh;
+    min-height: 65px;
     padding: 0px;
     top: 0px;
     background-color: var(--color-background-header);
     border-width: 0px;
-    border-bottom-width: 10px;
+    border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-image: linear-gradient(var(--color-border) 99.5%, var(--color-background) 100%) 1;
+    border-color: var(--color-border);
+    box-shadow: var(--color-border) 0px 10px 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    margin: 3vh auto;
 }
 
 .footer {
@@ -109,7 +123,6 @@ a:visited {
     align-items: center;
 }
 
-
 .genres {
     display: flex;
     flex-direction: row;
@@ -118,57 +131,52 @@ a:visited {
 
 .nav-button {
     text-align: center;
-    line-height: 1rem;
+    line-height: 2rem;
+    font-size: 2rem;
     background: none;
     color: var(--color-font);
     border: none;
     width: 20vw;
     margin: 5px 0px;
     padding: 5px;
-    min-width: 100px;
+    min-width: max-content;
+    border: solid 1px;
 }
 
 .nav-button:hover {
-    background-color: var(--color-button-hover);
+    background: linear-gradient(90deg, var(--color-invisible), var(--color-button-hover), var(--color-invisible));
     border-radius: 5px;
     border-right: 1px solid var(--color-border);
     border-left: 1px solid var(--color-border);
 }
 
-.content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100vw;
-    margin: 1rem auto;
-}
 
 .photo-albums {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.individual-album {
-    width: 40vw;
-    text-align: center;
-    background-color: var(--color-album-background);
-}
-
-.individual-album:hover {
-    scale: 1.05;
-    rotate: 5deg;
+    padding-right: 10px;
 }
 
 .album-cover {
-    width: 100%;
     aspect-ratio: 3 / 2;
+    width: 100%;
 }
 
-.images {
+.album-heading {
+    color: var(--color-font-title);
+    font-weight: bold;
+    font-size: 1.25rem;
+    height: 9vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -186,20 +194,37 @@ a:visited {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    margin: 2vh;
+    margin-bottom: auto;
+    background-color: var(--color-album-background);
+    text-align: center;
 }
 
-.genre-selection-container:hover {
+.album-selection-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh;
+    margin-bottom: auto;
+    background-color: var(--color-album-background);
+    text-align: center;
+}
+
+.selections:hover,
+.individual-album:hover {
     scale: 1.05;
-    rotate: 5deg;
 }
 
 .selections {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    display: block;
     align-content: center;
+    text-align: center;
     width: 40vw;
     margin: 15px;
+    background-color: var(--color-album);
 }
 
 .genre-title {
@@ -208,15 +233,17 @@ a:visited {
     font-weight: bolder;
     color: var(--color-font-title);
     font-size: 2rem;
-    margin: 2px;
-    margin-top: 5px;
+    padding: 0px;
+    margin: 2vh auto;
+    height: 7vh;
+    line-height: 7vh;
 }
 
 .slivers {
     width: 25%;
     aspect-ratio: 1 / 4;
     border: none;
-    margin: -1px;
+    margin: 0px;
 }
 
 .footer-center {
@@ -282,26 +309,61 @@ a:visited {
 #to-top-button {
     position: fixed;
     display: none;
-    top: 20px;
-    right: 30px;
+    top: 0px;
+    align-content: center;
+    justify-content: center;
     z-index: 99;
     border: solid 1px var(--color-totop-border);
+    border-top: none;
     outline: none;
     background-color: var(--color-totop);
     color: var(--color-totop-font);
-    border-radius: 5px;
-    box-shadow: 0px 5px 5px 5px 5px red;
+    width: 200px;
+    aspect-ratio: 5/1;
+    border-radius: 0px 0px 100px 100px;
+    box-shadow: var(--color-totop-border) 0px 5px 10px;
 }
 
 #to-top-button:hover {
     background-color: var(--color-totop-hover);
-    color: var(--color-totop-hover-font);
-    border-color: var(--color-totop-hover-border);
-    
+    color: var(--color-totop-font);
+    border-color: var(--color-totop-border);
 }
 
+#fullpage {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-fullscreen-background);
+    background-size: inherit;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    overflow-y: auto;
+}
+
+#fullscreen-image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: initial;
+    max-height: 75vh;
+}
 
 @media (max-width: 700px) {
+    html {
+        scrollbar-width: none;
+    }
+
+    .header {
+        height: fit-content;
+    }
+
     .content {
         flex-direction: column;
         align-items: center;
@@ -317,10 +379,6 @@ a:visited {
     }
 
     .selections {
-        width: 90vw;
-    }
-
-    .genre-selection-container {
         width: 90vw;
     }
 

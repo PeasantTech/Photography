@@ -1,0 +1,16 @@
+<section class="content">
+    <a id="sport-selection-link" class="selections" href="./sports.html">
+        <div id="sport-selection" class="genre-selection-container">
+            <img class="slivers"/>
+            <p class="genre-title">
+
+            </p>
+        </div>
+    </a>
+</section>
+
+<a class="individual-album selections" href="./Sports/WPI_Clark.html" >
+    <img class="album-cover" src="./images/Covers/WPIvClark-Cover.jpg" alt="WPI vs Clark Album Cover Image">
+    <p class="album-heading">WPI @ Clark<br />Sept. 20th, 2025<br />3-0 WPI
+    </p>
+</a>

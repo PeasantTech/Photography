@@ -4,14 +4,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sports</title>
+    <title id="page-title">Sports</title>
     <script src="https://kit.fontawesome.com/e9b22e8c05.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="./assets/faviconWhite.png">
     <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-    <button id="to-top-button" title="Go to top">Back to Top</button>
     <section id="header" class="header">
         <div class="navbar">
             <a href="./index.html"><button class="nav-button">Home</button></a>
@@ -28,17 +27,85 @@
         </div>
     </section>
     <section class="content">
+        <button id="to-top-button" title="Go to top">Back to Top</button>
         <div class="photo-albums">
-            <a class="individual-album" href="./Sports/WPI_Clark.html" ><img class="album-cover" src="./images/Covers/WPIvClark_015.jpg">WPI @ Clark<br />Sept. 20th, 2025<br />3-0 WPI</a>
-            <a class="individual-album" href="./Sports/WPI_Trinity.html" ><img class="album-cover" src="./images/Covers//WPIvTrinity_074.jpg">Trinity @ WPI<br />Sept. 24th, 2025<br />2-1 WPI</a>
-            <a class="individual-album" href="./Sports/WPI_Springfield.html" ><img class="album-cover" src="./images/Covers//WPIvSpringfield_145.jpg">Springfield @ WPI<br />Sept. 27th, 2025<br />3-1 WPI</a>
-            <a class="individual-album" href="./Sports/WPI_Wheaton.html" ><img class="album-cover" src="./images/Covers//WPIvWheaton_002.jpg">WPI @ Wheaton<br />Sept. 30th, 2025<br />5-1 WPI</a>
-            <a class="individual-album" href="./Sports/WPI_Babson.html" ><img class="album-cover" src="./images/Covers//WPIvBabson_231.jpg">WPI @ Babson<br />Oct. 4th, 2025<br />0-2 Babson</a>
-            <a class="individual-album" href="./Sports/WPI_Holyoke.html" ><img class="album-cover" src="./images/Covers//WPIvHolyoke_096.jpg">Holyoke @ WPI<br />Oct. 11th, 2025<br />3-1 WPI</a>
-            <a class="individual-album" href="./Sports/WPI_Connecticut.html" ><img class="album-cover" src="./images/Covers//WPIvConnecticut_041.jpg">WPI @ Connecticut<br />Oct. 14th, 2025<br />0-2 Connecticut</a>
-            <a class="individual-album" href="./Sports/WPI_Salve.html" ><img class="album-cover" src="./images/Covers//WPIvSalve_001.jpg">WPI @ Salve Regina<br />Oct. 18th, 2025<br />3-1 WPI</a>
-            <a class="individual-album" href="./Sports/WPI_MIT.html" ><img class="album-cover" src="./images/Covers//WPIvMIT_319.jpg">WPI @ MIT<br />Oct. 27th, 2025<br />1-0 WPI</a>
-            <a class="individual-album" href="./Sports/WPI_Wellesley.html" ><img class="album-cover" src="./images/Covers//WPIvWellesley_306.jpg">WPI @ Wellesley<br />Oct. 25th, 2025<br />1-0 WPI</a>
+            <a id="clark-album" class="selections" href="./Sports/WPI_Clark.html">
+                <div class="album-selection-container">
+                    <img class="album-cover" src="./images/Covers/WPIvClark-Cover.jpg" alt="WPI vs Clark Album Cover Image">
+                </div>
+                <p class="album-heading negative-rotate">WPI @ Clark<br />Sept. 20th, 2025<br />3-0 WPI</p>
+            </a>
+
+            <a id="trinity-album" class="selections" href="./Sports/WPI_Trinity.html">
+                <div class="album-selection-container">
+                    <img class="album-cover" src="./images/Covers/WPIvTrinity-Cover.jpg" alt="WPI vs Trinity Album Cover Image">
+                </div>
+                <p class="album-heading negative-rotate">Trinity @ WPI<br />Sept. 24th, 2025<br />2-1 WPI</p>
+            </a>
+
+            <a id="springfield-album" class="selections" href="./Sports/WPI_Springfield.html">
+                <div class="album-selection-container">
+                    <img class="album-cover" src="./images/Covers/WPIvSpringfield-Cover.jpg" alt="WPI vs Springfield Album Cover Image">
+                </div>
+                <p class="album-heading negative-rotate">Springfield @ WPI<br />Sept. 27th, 2025<br />3-1 WPI</p>
+            </a>
+
+            <a id="wheaton-album" class="selections" href="./Sports/WPI_Wheaton.html">
+                <div class="album-selection-container">
+                    <img class="album-cover" src="./images/Covers/WPIvWheaton-Cover.jpg" alt="WPI vs Wheaton Album Cover Image">
+                </div>
+                <p class="album-heading negative-rotate">WPI @ Wheaton<br />Sept. 30th, 2025<br />5-1 WPI</p>
+            </a>
+
+            <a id="babson-album" class="selections" href="./Sports/WPI_Babson.html">
+                <div class="album-selection-container">
+                    <img class="album-cover" src="./images/Covers/WPIvBabson-Cover.jpg" alt="WPI vs Babson Album Cover Image">
+                </div>
+                <p class="album-heading negative-rotate">WPI @ Babson<br />Oct. 4th, 2025<br />0-2 Babson</p>
+            </a>
+
+            <a id="holyoke-album" class="selections" href="./Sports/WPI_Holyoke.html">
+                <div class="album-selection-container">
+                    <img class="album-cover" src="./images/Covers/WPIvHolyoke-Cover.jpg" alt="WPI vs Holyoke Album Cover Image">
+                </div>
+                <p class="album-heading negative-rotate">Holyoke @ WPI<br />Oct. 11th, 2025<br />3-1 WPI</p>
+            </a>
+
+            <a id="connecticut-album" class="selections" href="./Sports/WPI_Connecticut.html">
+                <div class="album-selection-container">
+                    <img class="album-cover" src="./images/Covers/WPIvConnecticut-Cover.jpg" alt="WPI vs Connecticut Album Cover Image">
+                </div>
+                <p class="album-heading negative-rotate">WPI @ Connecticut<br />Oct. 14th, 2025<br />0-2 Connecticut</p>
+            </a>
+
+            <a id="salve-album" class="selections" href="./Sports/WPI_Salve.html">
+                <div class="album-selection-container">
+                    <img class="album-cover" src="./images/Covers/WPIvSalve-Cover.jpg" alt="WPI vs Salve Album Cover Image">
+                </div>
+                <p class="album-heading negative-rotate">WPI @ Salve Regina<br />Oct. 18th, 2025<br />3-1 WPI</p>
+            </a>
+
+            <a id="mit-album" class="selections" href="./Sports/WPI_MIT.html">
+                <div class="album-selection-container">
+                    <img class="album-cover" src="./images/Covers/WPIvMIT-Cover.jpg" alt="WPI vs MIT Album Cover Image">
+                </div>
+                <p class="album-heading negative-rotate">WPI @ MIT<br />Oct. 27th, 2025<br />1-0 WPI</p>
+            </a>
+
+            <a id="wellesley-album" class="selections" href="./Sports/WPI_Wellesley.html">
+                <div class="album-selection-container">
+                    <img class="album-cover" src="./images/Covers/WPIvWellesley-Cover.jpg" alt="WPI vs Wellesley Album Cover Image">
+                </div>
+                <p class="album-heading negative-rotate">WPI @ Wellesley<br />Oct. 25th, 2025<br />1-0 WPI</p>
+            </a>
+
+            <a id="smith-album" class="selections" href="./Sports/WPI_Smith.html">
+                <div class="album-selection-container">
+                    <img class="album-cover" src="./images/Covers/WPIvSmith-Cover.jpg" alt="WPI vs Smith Album Cover Image">
+                </div>
+                <p class="album-heading negative-rotate">WPI @ Smith<br />Nov. 1st, 2025<br />4-1 WPI</p>
+            </a>
+
         </div>
     </section>
     <section id="footer" class="footer">
@@ -55,8 +122,10 @@
                 <p class="footer-words copyright-year"><span class="copyright">©</span>2025</p>
             </div>
             <div class="quick-link-div">
-                <a class="redirect fa-brands fa-instagram" href="https://instagram.com/peasantpictures" target="_blank"></a>
-                <a class="redirect fa-brands fa-facebook" href="https://facebook.com/peasantpictures" target="_blank"></a>
+                <a class="redirect fa-brands fa-instagram" href="https://instagram.com/peasantpictures"
+                    target="_blank"></a>
+                <a class="redirect fa-brands fa-facebook" href="https://facebook.com/peasantpictures"
+                    target="_blank"></a>
                 <a class="redirect fa-solid fa-envelope" href="mailto:peasantpictures@gmail.com" target="_blank"></a>
                 <a class="redirect fa-brands fa-github" href="https://github.com/PeasantTech" target="_blank"></a>
             </div>
